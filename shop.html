@@ -155,33 +155,79 @@ button{
     <p class="price">Rs 699</p>
     <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
     </div>
-       </style>
+    <style>
+body{
+    background:linear-gradient(120deg,#020024,#090979,#000);
+    color:white;
+    font-family:Arial;
+    margin:0;
+}
+
+h1{text-align:center;margin:20px;}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.card{
+    background:#111;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 0 20px rgba(0,255,255,.3);
+    animation:fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.price{
+    color:#00ffff;
+    font-weight:bold;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#00bfff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>🔥 SHAKES 🔥</h1>
+<h1>🔥 OUR PRODUCTS 🔥</h1>
 
 <div class="products">
 
-    <div class="card">
+<!-- COPY THIS BLOCK FOR MORE PRODUCTS -->
+<div class="card">
+    <img src="https://files.catbox.moe/4hhfet.png">
+    <h3>Cinematic Pack</h3>
+    <p class="price">Rs 499</p>
+    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
+</div>
+
+<div class="card">
     <img src="images/product2.jpg">
     <h3>Reels Presets</h3>
     <p class="price">Rs 699</p>
     <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
+</div>
+       
 
 <!-- ADD MORE PRODUCTS SAME WAY -->
 
