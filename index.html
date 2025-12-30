@@ -6,103 +6,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+* { margin:0; padding:0; box-sizing:border-box; }
 
-body{
-    background:linear-gradient(120deg,#001f3f,#000);
-    height:100vh;
-    overflow:hidden;
-}
-
-/* LOADER */
-#loader{
-    position:fixed;
-    width:100%;
-    height:100%;
-    background:#000;
+body {
+    height: 100vh;
+    background: linear-gradient(270deg,#001f3f,#001a33,#002b5c);
+    background-size: 600% 600%;
+    animation: bgMove 12s ease infinite;
     display:flex;
     justify-content:center;
     align-items:center;
-    z-index:999;
+    font-family: Arial, sans-serif;
+    overflow:hidden;
 }
 
-.spinner{
-    width:80px;
-    height:80px;
-    border:6px solid #00eaff;
-    border-top:6px solid transparent;
-    border-radius:50%;
-    animation:spin 1s linear infinite;
+@keyframes bgMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
-@keyframes spin{
-    to{transform:rotate(360deg);}
-}
-
-/* MAIN CONTENT */
-.container{
-    display:none;
-    height:100vh;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+.container {
     text-align:center;
-    color:white;
+    animation: fadeIn 1.5s ease;
 }
 
-.logo{
+@keyframes fadeIn {
+    from {opacity:0; transform:scale(0.8);}
+    to {opacity:1; transform:scale(1);}
+}
+
+.logo {
     width:260px;
-    animation:float 3s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px cyan);
 }
 
-@keyframes float{
-    0%{transform:translateY(0)}
-    50%{transform:translateY(-20px)}
-    100%{transform:translateY(0)}
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0);}
 }
 
-button{
-    margin-top:20px;
-    padding:15px 40px;
-    border:none;
-    border-radius:30px;
+h1 {
+    color:#fff;
+    margin:20px 0;
+    text-shadow:0 0 15px cyan;
+}
+
+button {
+    padding:16px 40px;
     font-size:18px;
+    border:none;
+    border-radius:40px;
     background:linear-gradient(135deg,#00ffff,#00aaff);
+    color:black;
+    font-weight:bold;
+    box-shadow:0 0 25px cyan;
     cursor:pointer;
-    box-shadow:0 0 20px cyan;
+    transition:0.3s;
+}
+
+button:hover {
+    transform:scale(1.1);
 }
 </style>
 </head>
 
 <body>
 
-<div id="loader">
-    <div class="spinner"></div>
-</div>
-
-<div class="container" id="content">
-    <img src="logo.png" class="logo">
+<div class="container">
+    <img class="logo" src="https://files.catbox.moe/4hhfet.png">
     <h1>✨ WELCOME TO ZENOTM SHOP ✨</h1>
-    <button onclick="enterShop()">🚀 Enter Store</button>
+    <button onclick="location.href='shop.html'">🚀 Enter Store</button>
 </div>
-
-<audio id="clickSound" src="click.mp3"></audio>
-
-<script>
-window.onload = () => {
-    setTimeout(()=>{
-        document.getElementById("loader").style.display="none";
-        document.getElementById("content").style.display="flex";
-    },1500);
-}
-
-function enterShop(){
-    document.getElementById("clickSound").play();
-    setTimeout(()=>{
-        window.location.href="shop.html";
-    },300);
-}
-</script>
 
 </body>
 </html>
