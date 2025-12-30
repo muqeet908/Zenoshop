@@ -3,74 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <title>ZENOTM SHOP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(-45deg, #000428, #004e92, #000000);
-    background-size: 400% 400%;
-    animation: bg 10s ease infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
-    overflow: hidden;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+
+body{
+    background:linear-gradient(120deg,#001f3f,#000);
+    height:100vh;
+    overflow:hidden;
 }
 
-@keyframes bg {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+/* LOADER */
+#loader{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
 }
 
-.container {
-    text-align: center;
-    animation: fadeIn 2s ease;
+.spinner{
+    width:80px;
+    height:80px;
+    border:6px solid #00eaff;
+    border-top:6px solid transparent;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
 }
 
-img {
-    width: 320px;
-    border-radius: 20px;
-    box-shadow: 0 0 40px cyan;
-    animation: float 3s ease-in-out infinite;
+@keyframes spin{
+    to{transform:rotate(360deg);}
 }
 
-@keyframes float {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-15px);}
-    100% {transform: translateY(0);}
+/* MAIN CONTENT */
+.container{
+    display:none;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    color:white;
 }
 
-h1 {
-    color: white;
-    margin-top: 20px;
-    font-size: 28px;
+.logo{
+    width:260px;
+    animation:float 3s ease-in-out infinite;
 }
 
-button {
-    margin-top: 25px;
-    padding: 15px 40px;
-    font-size: 18px;
-    border: none;
-    border-radius: 50px;
-    background: linear-gradient(135deg, #00fff0, #00aaff);
-    cursor: pointer;
-    box-shadow: 0 0 20px cyan;
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-20px)}
+    100%{transform:translateY(0)}
 }
 
-button:hover {
-    transform: scale(1.1);
+button{
+    margin-top:20px;
+    padding:15px 40px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    background:linear-gradient(135deg,#00ffff,#00aaff);
+    cursor:pointer;
+    box-shadow:0 0 20px cyan;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <img src="https://files.catbox.moe/4hhfet.png">
-    <h1>✨ WELCOME TO ZENOTM SHOP ✨</h1>
-    <button onclick="location.href='shop.html'">🚀 Enter Store</button>
+<div id="loader">
+    <div class="spinner"></div>
 </div>
+
+<div class="container" id="content">
+    <img src="logo.png" class="logo">
+    <h1>✨ WELCOME TO ZENOTM SHOP ✨</h1>
+    <button onclick="enterShop()">🚀 Enter Store</button>
+</div>
+
+<audio id="clickSound" src="click.mp3"></audio>
+
+<script>
+window.onload = () => {
+    setTimeout(()=>{
+        document.getElementById("loader").style.display="none";
+        document.getElementById("content").style.display="flex";
+    },1500);
+}
+
+function enterShop(){
+    document.getElementById("clickSound").play();
+    setTimeout(()=>{
+        window.location.href="shop.html";
+    },300);
+}
+</script>
 
 </body>
 </html>
