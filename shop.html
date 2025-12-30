@@ -3,52 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <title>ZENOTM PRODUCTS</title>
-
 <style>
 body {
-    background: linear-gradient(120deg,#020024,#090979,#000);
+    background: linear-gradient(120deg, #020024, #090979, #000);
+    background-size: 400% 400%;
+    animation: bg 15s ease infinite;
     color: white;
     font-family: Arial;
     margin: 0;
     padding: 20px;
 }
 
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 h1 {
     text-align: center;
     margin-bottom: 40px;
-    text-shadow: 0 0 10px cyan;
+    text-shadow: 0 0 15px cyan;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: #111;
+.product {
+    background: rgba(0,0,0,0.6);
     border-radius: 15px;
     padding: 15px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0,255,255,0.2);
-    transition: 0.3s;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.8s;
 }
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px cyan;
+.product.show {
+    transform: translateY(0);
+    opacity: 1;
 }
 
-.card img {
+.product img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00ffee;
 }
 
 button {
     margin-top: 10px;
     width: 100%;
-    padding: 10px;
-    background: linear-gradient(135deg, #00f0ff, #00aaff);
+    padding: 12px;
+    background: linear-gradient(135deg, #00eaff, #008cff);
     border: none;
     color: black;
     font-weight: bold;
@@ -56,58 +65,49 @@ button {
     cursor: pointer;
 }
 
-.buttons {
-    display: none;
-    margin-top: 10px;
-}
-
-.buttons a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    background: #111;
-    padding: 8px;
-    margin-top: 6px;
-    border-radius: 6px;
-    border: 1px solid cyan;
+button:hover {
+    transform: scale(1.05);
 }
 </style>
 </head>
 
 <body>
 
-<h1>🔥 ZENOTM PREMIUM PRODUCTS 🔥</h1>
+<h1>🔥 PREMIUM PRODUCTS 🔥</h1>
 
-<div class="grid">
+<div class="product">
+    <img src="https://picsum.photos/500/300?1">
+    <h3>Premium Transitions Pack</h3>
+    <p class="price">Rs 499</p>
+    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
+</div>
+
+<div class="product">
+    <img src="https://picsum.photos/500/300?2">
+    <h3>Vlog Color LUTs</h3>
+    <p class="price">Rs 699</p>
+    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
+</div>
+
+<div class="product">
+    <img src="https://picsum.photos/500/300?3">
+    <h3>Cinematic Effects Pack</h3>
+    <p class="price">Rs 999</p>
+    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
+</div>
 
 <script>
-const products = [
-  "Cinematic Pack", "Reels Bundle", "Vlog Presets", "Transition Pack",
-  "Color LUTs", "Shake Effects", "Text Animations", "Instagram Pack",
-  "YouTube Kit", "Motion Pack", "Light Leaks", "Mega Bundle"
-];
+const products = document.querySelectorAll('.product');
 
-products.forEach(p => {
-document.write(`
-<div class="card">
-    <img src="https://picsum.photos/300/200?random=${Math.random()}">
-    <h3>${p}</h3>
-    <p>Price: Rs 499</p>
-    <button onclick="showButtons(this)">Buy Now</button>
-    <div class="buttons">
-        <a href="https://wa.me/923481689189" target="_blank">Contact on WhatsApp</a>
-        <a href="https://t.me/ZenoEditzTM" target="_blank">Contact on Telegram</a>
-    </div>
-</div>
-`);
+window.addEventListener('scroll', () => {
+    products.forEach(p => {
+        const top = p.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            p.classList.add('show');
+        }
+    });
 });
-
-function showButtons(btn) {
-    btn.nextElementSibling.style.display = "block";
-}
 </script>
-
-</div>
 
 </body>
 </html>
