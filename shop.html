@@ -1,207 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>ZENOTM PRODUCTS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <title>
+                   80xprofit
+                Home
+    </title>
+    <link rel="shortcut icon" type="image/png" href="/897.jpeg">
+    <meta name="title" Content="80xprofit">
+    <meta name="description" content="80xprofit">
+    <meta name="keywords" content="80xprofit click,earn money,ppv,pey per view,paid click,earn per click,ptclab">
+    <link rel="shortcut icon" href="/897.jpeg" type="image/x-icon">
 
-<style>
-body{
-    background:linear-gradient(120deg,#020024,#090979,#000);
-    color:white;
-    font-family:Arial;
-    margin:0;
-}
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-h1{text-align:center;margin:20px;}
+    <!-- Styles -->
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #7e22ce;
+            --accent-color: #06b6d4;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --dark-color: #0f172a;
+            --light-color: #f8fafc;
+            --card-bg: rgba(15,23,42,0.9);
+            --glass-effect: rgba(255, 255, 255, 0.12);
+            --text-primary: #ffffff;
+            --text-secondary: #cbd5e1;
+        }
 
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-.card{
-    background:#111;
-    border-radius:15px;
-    padding:15px;
-    box-shadow:0 0 20px rgba(0,255,255,.3);
-    animation:fadeUp 0.7s ease forwards;
-}
+        body {
+            background: radial-gradient(circle at top, #0f172a 0%, #0ea5e9 40%, #22c55e 80%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-@keyframes fadeUp{
-    from{opacity:0;transform:translateY(40px);}
-    to{opacity:1;transform:translateY(0);}
-}
+        .app-container {
+            max-width: 460px;
+            margin: 0 auto;
+            background: rgba(15, 23, 42, 0.96);
+            min-height: 100vh;
+            backdrop-filter: blur(20px);
+            position: relative;
+            padding-bottom: 70px; /* space for fixed bottom nav */
+        }
 
-.card img{
-    width:100%;
-    border-radius:10px;
-}
+        /* Header Styles */
+        .app-header {
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.price{
-    color:#00ffff;
-    font-weight:bold;
-}
+        .logo {
+            height: 40px;
+            width: auto;
+        }
 
-button{
-    width:100%;
-    padding:10px;
-    background:#00bfff;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-    margin-top:10px;
-}
-</style>
-</head>
+        .header-actions {
+            display: flex;
+            gap: 10px;
+        }
 
-<body>
+        .header-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 6px 9px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
 
-<h1>🔥 OUR PRODUCTS 🔥</h1>
+        .header-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.5);
+        }
 
-<div class="products">
+        /* Hero Banner */
+        .hero-banner {
+            padding: 16px 16px 6px;
+            position: relative;
+            overflow: hidden;
+        }
 
-<!-- COPY THIS BLOCK FOR MORE PRODUCTS -->
-<div class="card">
-    <img src="https://files.catbox.moe/4hhfet.png">
-    <h3>Cinematic Pack</h3>
-    <p class="price">Rs 499</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-</div>
+        .banner-slider {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
 
-<div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-</div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
+        .banner-slide {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Auth Buttons */
+        .auth-section {
+            padding: 10px 16px 16px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .auth-btn {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 13px;
+            border-radius: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.5);
+        }
+
+        .auth-btn.alt {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        }
+
+        .auth-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(15, 118, 110, 0.5);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            padding: 5px 16px 16px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .feature-item {
+            background: linear-gradient(145deg, rgba(30,64,175,0.9), rgba(8,47,73,0.95));
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 10px 6px;
+            text-align: center;
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.12), transparent 60%);
+            opacity: 0;
+            transition: .3s;
+        }
+
+        .feature-item:hover::after {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 34px;
+            height: 34px;
+            margin: 0 auto 4px;
+            background: radial-gradient(circle, var(--accent-color), var(--primary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #0f172a;
+        }
+
+        .feature-text {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Plans Section */
+        .plans-section {
+            padding: 12px 16px 16px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, #f97316, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .plans-container {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .plan-card {
+            background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(30,64,175,0.95));
+            backdrop-filter: blur(16px);
+            border-radius: 20px;
+            padding: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.6);
+            box-shadow: 0 10px 30px rgba(15,23,42,0.9);
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: -40%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(251,191,36,0.25), transparent 60%);
+            opacity: 0.9;
+            pointer-events: none;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(15,23,42,1);
+        }
+
+        .plan-header {
+            text-align: center;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .plan-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .plan-price {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #facc15, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .plan-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-box {
+            background: rgba(15,23,42,0.9);
+            padding: 10px 6px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(75,85,99,0.8);
+        }
+
+        .feature-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 3px;
+        }
+
+        .feature-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .plan-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed rgba(148, 163, 184, 0.5);
+        }
+
+        .detail-label {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .detail-value {
+            color: #facc15;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .invest-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .invest-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(34,197,94,0.5);
+        }
+
+        .invest-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.45s;
+        }
+
+        .invest-btn:hover::after {
+            left: 100%;
+        }
+
+        /* Extra Banners under Plan */
+        .promo-banners {
+            margin-top: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .promo-banners img {
+            width: 100%;
+            border-radius: 18px;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav-wrapper {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 999;
+        }
+
+        .bottom-nav {
+            background: rgba(15,23,42,0.98);
+            backdrop-filter: blur(18px);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 6px 12px 8px;
+            border-top: 1px solid rgba(148, 163, 184, 0.6);
+            max-width: 460px;
+            width: 100%;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 6px 4px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item.active {
+            background: rgba(37, 99, 235, 0.18);
+        }
+
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 3px;
+            opacity: 0.8;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item.active .nav-icon {
+            opacity: 1;
+        }
+
+        .nav-text {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item.active .nav-text {
+            color: #60a5fa;
+        }
+
+        /* Animations */
+        @keyframes  fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .app-container {
+                border-radius: 0;
+            }
+            
+            .feature-item {
+                padding: 10px 4px;
+            }
+            
+            .feature-text {
+                font-size: 10px;
+            }
+            
+            .plan-card {
+                padding: 16px;
+            }
+        }
+
+        /* Loading Animation (if needed) */
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes  spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
-
 <body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <img src="/897.jpeg" alt="Logo" class="logo">
+            <div class="header-actions">
+                <a href="https://80xprofit.com/user/login" class="header-btn">Login</a>
+                <a href="https://80xprofit.com/user/register" class="header-btn" style="background: var(--secondary-color);">Sign Up</a>
+            </div>
+        </header>
 
-<h1>🔥 CC 🔥</h1>
+        <!-- Hero Banner -->
+        <section class="hero-banner fade-in-up">
+            <div class="banner-slider">
+                <mg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvjNg5fj8IoTzwDUAYu2YYtWNSBA6mJ8_ilQ&s" alt="Banner" class="banner-slide">
+            </div>
+        </section>
 
-<div class="products">
+        <!-- Auth Buttons -->
+        <section class="auth-section fade-in-up">
+            <a href="https://80xprofit.com/user/register" class="auth-btn">Create Account</a>
+            <a href="https://80xprofit.com/user/login" class="auth-btn alt">Login Now</a>
+        </section>
 
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-       </style>
-</head>
+        <!-- Features Grid -->
+        <section class="features-grid fade-in-up">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="feature-text">Wallet</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="feature-text">Earnings</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="feature-text">Rewards</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="feature-text">Team</div>
+            </div>
+        </section>
+      
+                         
+<!-- Plans Section -->
+<section class="plans-section">
+    <h2 class="section-title">Investment Plans</h2>
 
-<body>
+    <div class="plans-container">
+                    <div class="plan-card fade-in-up">
 
-<h1>🔥 EFFECTS 🔥</h1>
+                <!-- Header -->
+                <div class="plan-header">
+                    <div class="plan-name">80xprofit  1</div>
 
-<div class="products">
+                    <div class="plan-price">
+                                                    Rs80.00
+                                            </div>
+                </div>
 
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
+                <!-- Features -->
+                <div class="plan-features">
+                    <div class="feature-box">
+                        <div class="feature-label">Duration</div>
+                        <div class="feature-value">
+                            80 Day
+                        </div>
+                    </div>
 
-</style>
-</head>
+                    <div class="feature-box">
+                        <div class="feature-label">Daily Profit</div>
+                        <div class="feature-value">
+                            Rs25.00
+                        </div>
+                    </div>
 
-<body>
+                    <div class="feature-box">
+                        <div class="feature-label">Total Profit</div>
+                        <div class="feature-value">
+                                                            
+                                                                    Rs2,000.00
+                                                                                    </div>
+                    </div>
+                </div>
 
-<h1>🔥 SHAKES 🔥</h1>
+                <!-- Plan Details -->
+                <div class="plan-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Level 1 Commission</span>
+                        <span class="detail-value">
+                            17%
+                        </span>
+                    </div>
+                </div>
 
-<div class="products">
+                <!-- Invest Button -->
+                <a href="https://80xprofit.com/user/login" class="auth-btn alt">
+                    Buy Now
+                </a>
 
-<!-- COPY THIS BLOCK FOR MORE PRODUCTS -->
-<div class="card">
-    <img src="https://files.catbox.moe/4hhfet.png">
-    <h3>Cinematic Pack</h3>
-    <p class="price">Rs 499</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-</div>
+            </div>
+                    <div class="plan-card fade-in-up">
 
-<div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-</div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="images/product2.jpg">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-    <div class="card">
-    <img src="https://files.catbox.moe/hxqfc5.gif">
-    <h3>Reels Presets</h3>
-    <p class="price">Rs 699</p>
-    <button onclick="window.open('https://wa.me/923481689189')">Buy Now</button>
-    </div>
-       
+                <!-- Header -->
+                <div class="plan-header">
+                    <div class="plan-name">80xprofit 2</div>
 
-<!-- ADD MORE PRODUCTS SAME WAY -->
+                    <div class="plan-price">
+                                                    Rs380.00
+                                            </div>
+                </div>
 
-</div>
+                <!-- Features -->
+                <div class="plan-features">
+                    <div class="feature-box">
+                        <div class="feature-label">Duration</div>
+                        <div class="feature-value">
+                            80 Day
+                        </div>
+                    </div>
 
-</body>
-</html>
+                    <div class="feature-box">
+                        <div class="feature-label">Daily Profit</div>
+                        <div class="feature-value">
+                            Rs80.00
+                        </div>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-label">Total Profit</div>
+                        <div class="feature-value">
+                                                            
+                                                                    Rs6,400.00
+                                                                                    </div>
+                    </div>
+                </div>
+
+                <!-- Plan Details -->
+                <div class="plan-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Level 1 Commission</span>
+                        <span class="detail-value">
+                            17%
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Invest Button -->
+                <a href="https://80xprofit.com/user/login" class="auth-btn alt">
+            
